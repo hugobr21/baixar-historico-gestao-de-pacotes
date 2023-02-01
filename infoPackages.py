@@ -22,6 +22,7 @@ options1.add_argument("-profile")
 options1.add_argument(setup_programa.perfilFirefox1)
 options1.binary_location = setup_programa.caminhoFirefox
 driver1 = webdriver.Firefox(options=options1)
+driver1.get('https://envios.mercadolivre.com.br/logistics/management-packages')
 driver1.set_page_load_timeout(15)
 
 while True:
@@ -33,6 +34,7 @@ while True:
     except:
         driver1.quit()
         driver1 = webdriver.Firefox(options=options1)
+        driver1.get('https://envios.mercadolivre.com.br/logistics/management-packages')
         driver1.set_page_load_timeout(15)
         pass
 
